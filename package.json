@@ -1,0 +1,29 @@
+{
+	"name": "smart-id",
+	"version": "0.1.0",
+	"description": "generate smart random id",
+	"main": "lib/index.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/yangsibai/node-id-generator"
+	},
+	"keywords": [
+		"util",
+		"random",
+		"id",
+		"generator",
+		"mysql"
+	],
+	"author": "yangsibai",
+	"license": "GPL3",
+	"bugs": {
+		"url": "https://github.com/yangsibai/node-id-generator/issues"
+	},
+	"dependencies": {
+		"underscore": "^1.7.0"
+	},
+	"devDependencies": {
+		"mocha": "^1.21.4",
+		"should": "^4.0.4"
+	}
+}
