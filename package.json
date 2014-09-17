@@ -5,7 +5,7 @@
 	"main": "lib/index.js",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/yangsibai/node-id-generator"
+		"url": "https://github.com/yangsibai/node-smart-id.git"
 	},
 	"keywords": [
 		"util",
@@ -17,7 +17,7 @@
 	"author": "yangsibai",
 	"license": "GPL3",
 	"bugs": {
-		"url": "https://github.com/yangsibai/node-id-generator/issues"
+		"url": "https://github.com/yangsibai/node-smart-id/issues"
 	},
 	"dependencies": {
 		"underscore": "^1.7.0"
