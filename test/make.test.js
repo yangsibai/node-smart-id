@@ -22,7 +22,7 @@ describe("smart-id make id test", function () {
 				length: -1
 			}).should.throw();
 		});
-		it("set length of zero should not throw a error and have a leng of 10", function () {
+		it("set length of zero should not throw a error and have a length of 10", function () {
 			smartId.make.bind(null, {
 				length: 0
 			}).should.not.throw();
@@ -57,11 +57,33 @@ describe("smart-id make id test", function () {
 			_containUpper(randomStr).should.be.false;
 			_containNumber(randomStr).should.be.true;
 		});
-		it("mode 'aA' should use all characters", function() {
+		it("mode 'aA' should use all characters", function () {
 			randomStr = longRandomId("aA");
 			_containLower(randomStr).should.be.true;
 			_containUpper(randomStr).should.be.true;
 			_containNumber(randomStr).should.be.false;
+		});
+		it("mode 'aA_' should use '_' as a condidate character", function () {
+			randomStr = longRandomId("aA_");
+			/_/.test(randomStr).should.be.true;
+		});
+	});
+	describe("retry test", function () {
+		it("retry 3 times and throw a error", function () {
+			smartId.make.bind(null, {
+				retry: 3,
+				verify: function (str){
+					return false;
+				}
+			}).should.throw();
+		});
+	});
+	describe("async test", function (){
+		it("first argument is a callback function", function (){
+			smartId.make(function (err, id){
+				should.not.exist(err);
+				id.should.have.a.lengthOf(10);
+			});
 		});
 	});
 });
