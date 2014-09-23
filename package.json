@@ -1,6 +1,6 @@
 {
 	"name": "smart-id",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "generate smart random id",
 	"main": "lib/index.js",
 	"repository": {
