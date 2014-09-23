@@ -23,9 +23,7 @@ exports.make = (options)->
 
 	if options
 		for k, v of options
-			defaultOptions[k] = v
-
-	console.log defaultOptions.length
+			defaultOptions[k] = v if v
 
 	throw new Error("length should be a positive number") if defaultOptions.length <= 0
 	throw new Error("mode should not be empty") unless defaultOptions.mode
