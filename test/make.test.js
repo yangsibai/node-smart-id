@@ -10,26 +10,14 @@ describe("smart-id make id test", function () {
 		it("omit options should make a length of 10 random id", function () {
 			id = smartId.make();
 			id.should.have.lengthOf(10);
+			console.log(id);
 		});
 		it("set length of 6 should make a length of 6 id", function () {
-			id = smartId.make({
-				length: 6
-			});
+			id = smartId.make('a', 6);
 			id.should.have.a.lengthOf(6);
 		});
 		it("set length of negative should throw a error", function () {
-			smartId.make.bind(null, {
-				length: -1
-			}).should.throw();
-		});
-		it("set length of zero should not throw a error and have a length of 10", function () {
-			smartId.make.bind(null, {
-				length: 0
-			}).should.not.throw();
-			id = smartId.make({
-				length: 10
-			});
-			id.should.have.lengthOf(10);
+			smartId.make.bind(null, 'a', -1).should.throw();
 		});
 	});
 	describe("mode test", function () {
@@ -68,33 +56,13 @@ describe("smart-id make id test", function () {
 			/_/.test(randomStr).should.be.true;
 		});
 	});
-	describe("retry test", function () {
-		it("retry 3 times and throw a error", function () {
-			smartId.make.bind(null, {
-				retry: 3,
-				verify: function (str){
-					return false;
-				}
-			}).should.throw();
-		});
-	});
-	describe("async test", function (){
-		it("first argument is a callback function", function (){
-			smartId.make(function (err, id){
-				should.not.exist(err);
-				id.should.have.a.lengthOf(10);
-			});
-		});
-	});
 });
 
 
 function longRandomId(mode) {
 	randomStr = "";
 	for (var i = 0; i < 1000; i++) {
-		randomStr += smartId.make({
-			mode: mode
-		});
+		randomStr += smartId.make(mode);
 	}
 	return randomStr;
 }

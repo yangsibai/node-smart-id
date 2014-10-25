@@ -1,8 +1,13 @@
 {
 	"name": "smart-id",
-	"version": "0.1.1",
+	"version": "0.2.0",
 	"description": "generate smart random id",
-	"main": "lib/index.js",
+	"main": "bin/index.js",
+	"scripts": {
+	  "prepublish": "coffee -co bin/ lib/*.coffee",
+	  "postpublish": "rm -rf bin",
+	  "test": "echo \"Error:no test specified\" && exit 1"
+	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/yangsibai/node-smart-id.git"
