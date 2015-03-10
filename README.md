@@ -27,4 +27,4 @@ smartId.make(mode, length)
 + `s` is special, it stands for smart mode, this will trim confused characters like `0`, `o` and `O`.
 
 1. default mode is `aA0`.
-2. default length is 10.
+2. default length is `10`.
