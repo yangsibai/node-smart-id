@@ -8,7 +8,7 @@ Generate random string for you.
 
 	npm install smart-id
 
-###Get stared
+###Get started
 
 	var smartId = require("smart-id");
 	var id = smartId.make(); // will make a random string like: mYcAEQExvm
