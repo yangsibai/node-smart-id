@@ -1,5 +1,5 @@
 .idea
 node_modules
-*.js
+lib/index.js
 *.map
 .DS_Store
