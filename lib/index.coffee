@@ -1,5 +1,3 @@
-_ = require("underscore")
-
 lower = "abcdefghijklmnopqrstuvwxyz"
 lowerSmart = "abcdefghjkmnpqrstuvwxyz"
 
