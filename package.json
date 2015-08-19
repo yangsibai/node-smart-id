@@ -1,6 +1,6 @@
 {
 	"name": "smart-id",
-	"version": "0.3.0",
+	"version": "0.4.0",
 	"description": "generate smart random id",
 	"main": "bin/index.js",
 	"scripts": {
@@ -20,7 +20,7 @@
 		"mysql"
 	],
 	"author": "yangsibai",
-	"license": "GPL3",
+	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/yangsibai/node-smart-id/issues"
 	},
