@@ -1,19 +1,19 @@
-##smart-id
+## smart-id
 
 Generate random string for you.
 
 [![NPM](https://nodei.co/npm/smart-id.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/smart-id/)
 
-###Installation
+### Installation
 
 	npm install smart-id
 
-###Get started
+### Get started
 
 	var smartId = require("smart-id");
 	var id = smartId.make(); // will make a random string like: mYcAEQExvm
 
-###Api
+### Api
 
 smartId.make(mode, length)
 
